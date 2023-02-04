@@ -61,9 +61,6 @@ class WelcomeWindow(Screen):
     def switch_to_healing_view(self, *args):
         self.manager.current = "worldwindow"
         self.manager.transition.direction="left"
-        # in kv file
-        # app.root.current = "trackerwindow"
-        # root.manager.transition.direction = "left"
 
 
 
@@ -118,9 +115,6 @@ class WorldWindow(Screen):
         # self.healing_message.text = "Healing in progress"
         Clock.schedule_interval(partial(self.next), 1/15)
 
-    # def heal_your_world(self, *args):
-    #     self.healing_message.text = "healing"
-
 
 class WindowManager(ScreenManager):
     pass
@@ -135,27 +129,6 @@ class HealthApp(App):
     # without MD components
     def build(self):
         return kv
-
-# from kivymd.uix.chip import MDChip
-
-
-# class MyWidget(MDChip):
-#     def __init__(self, **kwargs):
-#         self.label = App.get_running_app().title
-#         super().__init__(**kwargs)
-
-
-# class HealthApp(MDApp):
-#     # https://github.com/kivymd/KivyMD/wiki/Modules-Material-App#exceptions
-
-#     def __init__(self, **kwargs):
-#         self.title = "HealthApp"
-#         super().__init__(**kwargs)
-
-#     def build(self):
-#         self.root = Builder.load_string("fix_my_world.kv")
-
-
 
 
 if __name__ == "__main__":
