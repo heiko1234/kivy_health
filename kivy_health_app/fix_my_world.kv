@@ -1,0 +1,88 @@
+
+
+WindowManager:
+    WelcomeWindow:
+    WorldWindow:
+
+
+
+
+<WelcomeWindow>:
+    name: "welcomewindow"
+
+    # entrance_name_label:entrance_name_label_kv
+
+    GridLayout:
+        cols: 1
+        size_hint: (0.6, 0.6)
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        Image: 
+            source: "assets/ApplicationTrackerLogo.png"
+
+        Button:
+            text: "Entrance"
+            size_hint: (1, 0.5)
+            bold: True
+            background_color: "#7844E3"
+            background_normal: ""
+            on_release: 
+                root.entrance_button_behavior()
+                #app.root.current = "trackerwindow"
+                #root.manager.transition.direction = "left"
+
+
+<WorldWindow>:
+    name: "worldwindow"
+
+    healing_message:healing_message
+    progress_bar:progress_bar
+    breath_message:breath_message
+
+    GridLayout:
+        cols: 1
+        size_hint: (0.7, 0.7)
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        ProgressBar:
+            id: progress_bar
+            line_width: 30
+            value: 0
+            size_hint: (1.0, 0.2)
+
+        Label:
+            id: healing_message
+            text: ""
+            font_size:28
+            size_hint: (0.8, 0.1)
+
+        GridLayout:
+            cols: 1
+            size_hint: (0.5, 0.4)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            Label:
+                id: breath_message
+                text: ""
+                font_size: 32
+                size_hint: (1, 1)
+
+        Label:
+            id: space_message
+            text:""
+            size_hint: (0.8, 0.1)
+
+
+        # MDRoundFlatButton:
+        #     # text_color: "white"
+        Button:
+            text:"Fix my world"
+            id: fix_my_world_button
+            size_hint: (0.2, 0.2)
+            bold: True
+            background_color: "#7844E3"
+            background_normal: ""
+            on_release: 
+                root.heal_your_world()
+
+
