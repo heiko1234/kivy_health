@@ -13,6 +13,10 @@ pandas = "^1.5.2"
 numpy = "^1.24.1"
 kivymd = "^1.1.1"
 
+# create android app
+buildozer = "^1.5.0"
+cython = "^0.29.33"
+
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
 flake8 = "^6.0.0"

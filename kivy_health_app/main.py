@@ -94,7 +94,7 @@ class WindowManager(ScreenManager):
 
 
 # Designate our .v design file
-kv = Builder.load_file("fix_my_world.kv")
+kv = Builder.load_file("heal.kv")
 
 
 class HealApp(App):
