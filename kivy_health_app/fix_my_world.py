@@ -81,13 +81,13 @@ class WorldWindow(Screen):
         elif self.progress_bar.value > 2 and  self.progress_bar.value < 10:
             self.healing_message.text = "Problems identified"
         elif self.progress_bar.value > 10 and self.progress_bar.value < 42 :
-            self.healing_message.text = "Healing in progress"
+            self.healing_message.text = "Repairing in progress"
         elif self.progress_bar.value > 42 and self.progress_bar.value <64:
             self.healing_message.text = "You have taff problems"
         elif self.progress_bar.value > 64 and self.progress_bar.value <72:
             self.healing_message.text = "It takes some more time"
         elif self.progress_bar.value > 72 and self.progress_bar.value < 100:
-            self.healing_message.text = "Healing in progress"
+            self.healing_message.text = "Reparing in progress"
         elif self.progress_bar.value >= 100:
             self.healing_message.text = "I hope your world is \n   a bit better now"
 
