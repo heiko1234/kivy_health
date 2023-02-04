@@ -97,11 +97,11 @@ class WindowManager(ScreenManager):
 kv = Builder.load_file("fix_my_world.kv")
 
 
-class HealthApp(App):
+class HealApp(App):
     # without MD components
     def build(self):
         return kv
 
 
 if __name__ == "__main__":
-    HealthApp().run()
+    HealApp().run()
