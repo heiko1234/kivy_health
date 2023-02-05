@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Android
+*.apk
+*.aap
+
+
 # Distribution / packaging
 .buildozer
 .Python
