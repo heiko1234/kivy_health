@@ -180,7 +180,7 @@ sudo apt install adb
 
 
 # connect to device
-adb connect 192.168.0.158:5555
+adb connect 192.168.0.158:5555  # works not for me
 
 # to list all connections
 adb devices
@@ -201,6 +201,16 @@ adb -s 222be3df install heal-0.1-arm64-v8a_armeabi-v7a-debug.apk
 
 
 ```
+
+
+# All on Mobil
+
+![login](./assets/app_on_mobil.png)
+
+![on_app](./assets/heal_login.png)
+
+![logo_on_app](./assets/screenshoot_on_mobil.png)
+
 
 
 
