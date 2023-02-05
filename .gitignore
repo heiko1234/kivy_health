@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-# .buildozer
+.buildozer
 .Python
 build/
 develop-eggs/
