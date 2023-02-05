@@ -2,7 +2,7 @@
 
 This is a simple kivy app.
 
-![heal_logo](./assets/Health_logo_Kreis3.png)
+![heal_logo](./assets/Health_logo3.png)
 
 
 The purpose of this app is to give the user a 10 sek break.
@@ -60,29 +60,6 @@ javac -version
 
 ```
 
-Install buildozer in the virtual environment with poetry
-
-```dash
-
-poetry add buildozer
-
-poetry add cython
-
-# do not miss to add `.buildozer` to  .gitignore  file
-
-```
-
-Install [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager)
-
-
-Download the latest "command line tools only" package from the Android Studio downloads page and unzip the package.
-Move the unzipped cmdline-tools directory into a new directory of your choice, such as android_sdk. This new directory is your Android SDK directory.
-
-Add the unzipped files to your .venv or .buildozer/android/app/plattform/android-sdk/tools/....
-
-
-## Config buildozer
-
 Be sure libssl-dev and java is up-to-date on your machine. it cause strange errors like not installing sdk-tools on the machine or not establishing ssl download conections.
 
 ```dash
@@ -103,6 +80,35 @@ In case sdk-tools get not installed, do it manually, but there is a deeper probl
 
 https://stackoverflow.com/questions/59330223/sdkmanager-not-installed
 
+Install buildozer in the virtual environment with poetry
+
+```dash
+
+poetry add buildozer
+
+poetry add cython
+
+# do not miss to add `.buildozer` to  .gitignore  file
+
+```
+It will be automatically installed, if all is up-to-date.
+
+Optional:
+
+Install [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager)
+
+
+Download the latest "command line tools only" package from the Android Studio downloads page and unzip the package.
+Move the unzipped cmdline-tools directory into a new directory of your choice, such as android_sdk. This new directory is your Android SDK directory.
+
+Add the unzipped files to your .venv or .buildozer/android/app/plattform/android-sdk/tools/....
+
+
+## Config buildozer
+
+Required if something goes wrong.
+
+
 Download the SDK manager here: wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip (run this on your command line in your buildozer directory)
 
 Then you unzip it with the command: $ unzip sdk-tools-linux-3859397.zip
@@ -116,7 +122,8 @@ andriod.sdk_path = (Your file path) eg /home/freezy/buildozer/
 
 
 
-´´´dash
+```dash
+
 # buildozer.spec  file: 
 # line 127
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
@@ -128,9 +135,12 @@ android.sdk_path = /home/heiko/Repos/kivy/kivy_health_repo/kivy_health/.buildoze
 
 ```
 
+
+# Work with buildozer
+
 Following the description [here](https://realpython.com/mobile-app-kivy-python/)
 
-´´´dash
+```dash
 
 # to make it testable
 
